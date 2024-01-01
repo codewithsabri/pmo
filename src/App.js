@@ -3,14 +3,14 @@ import './App.css';
 import React, { useState } from 'react'
 import Navigation from './Navigation'
 import { Routes, Route } from "react-router-dom";
-import MyProgress from './Component/MyProgress';
+// import MyProgress from './Component/MyProgress';
 import Home from './Component/Home';
 import Login from './Component/Login';
 import Register from './Component/Register';
-import ChartProgress from './Component/ChartProgress';
+// import ChartProgress from './Component/ChartProgress';
 import Stories from './Component/Stories';
 import Ressources from './Component/Ressources';
-import Stopwatch from './Component/Stopwatch';
+// import Stopwatch from './Component/Stopwatch';
 import SucessStories from './Component/SucessStories';
 import Myprofile from './Component/Myprofile';
 import { createContext, useContext } from 'react';
@@ -28,10 +28,10 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/MyProgress" element={<Stopwatch />} />
+          {/* <Route path="/MyProgress" element={<Stopwatch />} /> */}
           <Route path="/Login" element={<Login />} />
           <Route path="/Register" element={<Register />} />
-          <Route path="/ChartProgress" element={<ChartProgress />} />
+          {/* <Route path="/ChartProgress" element={<ChartProgress />} /> */}
           <Route path="/Stories" element={<Stories />} />
           <Route path="/Ressources" element={<Ressources />} />
           <Route path="/SucessStories" element={<SucessStories />} />
