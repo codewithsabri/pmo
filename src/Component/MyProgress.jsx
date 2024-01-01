@@ -1,6 +1,6 @@
 import React from 'react'
 import { CircularProgressbar, buildStyles, CircularProgressbarWithChildren } from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
+// import 'react-circular-progressbar/dist/styles.css';
 
 
 function MyProgress({ timerDays, timerHours, timerMinutes, timerSeconds,handleStart , start}) {
@@ -8,7 +8,7 @@ function MyProgress({ timerDays, timerHours, timerMinutes, timerSeconds,handleSt
 console.log('t')
   return (
     <div className="grid h-[60vh] place-items-center">
-      <div style={{ width: 300, height: 300 }}>
+      {/* <div style={{ width: 300, height: 300 }}>
         <p className="mb-6">Next Milestone : 2 days and 6 hours</p>
         <CircularProgressbarWithChildren value={80}     text={` ${start == true ? timerDays : ''}  ${timerDays > 1 ? 'days' : 'day'} `}>
           <div className="absolute inset-x-0 bottom-12 h-16">
@@ -19,7 +19,7 @@ console.log('t')
         </CircularProgressbarWithChildren>
 
         <button onClick={ handleStart}>{start == true ? 'Relapse' : 'Start'}</button>
-      </div>
+      </div> */}
     </div>
   )
 }
