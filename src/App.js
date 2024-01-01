@@ -7,7 +7,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from './Component/Home';
 import Login from './Component/Login';
 import Register from './Component/Register';
-// import ChartProgress from './Component/ChartProgress';
+import ChartProgress from './Component/ChartProgress';
 import Stories from './Component/Stories';
 import Ressources from './Component/Ressources';
 // import Stopwatch from './Component/Stopwatch';
@@ -31,7 +31,7 @@ function App() {
           {/* <Route path="/MyProgress" element={<Stopwatch />} /> */}
           <Route path="/Login" element={<Login />} />
           <Route path="/Register" element={<Register />} />
-          {/* <Route path="/ChartProgress" element={<ChartProgress />} /> */}
+          <Route path="/ChartProgress" element={<ChartProgress />} />
           <Route path="/Stories" element={<Stories />} />
           <Route path="/Ressources" element={<Ressources />} />
           <Route path="/SucessStories" element={<SucessStories />} />
