@@ -1,0 +1,11 @@
+.Avatar {
+    background: green;
+    height : 50px;
+    width : 50px;
+}
+
+.DiscussionListItem-content{
+ justify-content: center;
+ align-items: center;
+
+}
