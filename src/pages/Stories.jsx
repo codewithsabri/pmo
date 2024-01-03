@@ -1,11 +1,11 @@
 import React, { useState, useContext } from 'react'
 import './Stories.css';
-import { userContext } from '../App'
+import { useAuth} from '../context/AuthContext';
 
 function Stories() {
-  const [authenticated, setAuthenticated] = useContext(userContext);
+  const { user, Authenticate, Disconnect } = useAuth();
 
-  console.log(authenticated)
+  console.log(Authenticate)
 
   let img = [
     "https://discuss.flarum.org/assets/avatars/kv0cEfF4E8N5OEy1.png",
@@ -14,7 +14,7 @@ function Stories() {
   return (
     <>
       <div>ALL Stories
-        {authenticated == false &&
+        {user == false &&
           <div className="max-w-sm w-1/2 lg:max-w-full lg:flex justify-center mt-2 m-auto ">
             <div className="h-48 lg:h-auto lg:w-auto flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" title="Woman holding a mug">
             </div>
@@ -44,7 +44,7 @@ function Stories() {
 
       <div> <button className="bg-green-600 rounded-full py-2 px-4 text-white mt-2">Share mine</button>
 
-        <span onClick={() => setAuthenticated(!authenticated)} className="visually-hidden">34 replies</span></div>
+        <span onClick={() => Authenticate(user)} className="visually-hidden">34 replies</span></div>
 
     </>
   )

@@ -4,27 +4,27 @@ import React, { useState } from 'react'
 import Navigation from './Navigation'
 import { Routes, Route } from "react-router-dom";
 // import MyProgress from './Component/MyProgress';
-import Home from './Component/Home';
-import Login from './Component/Login';
-import Register from './Component/Register';
-import ChartProgress from './Component/ChartProgress';
-import Stories from './Component/Stories';
-import Ressources from './Component/Ressources';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import ChartProgress from './pages/ChartProgress';
+import Stories from './pages/Stories';
+import Ressources from './pages/Ressources';
 // import Stopwatch from './Component/Stopwatch';
-import SucessStories from './Component/SucessStories';
-import Myprofile from './Component/Myprofile';
-import Account from './Component/Account';
+import SucessStories from './pages/SucessStories';
+import Myprofile from './pages/Myprofile';
+import Account from './pages/Account';
 import { createContext, useContext } from 'react';
+import { AuthProvider } from './context/AuthContext';
 
-export const userContext = createContext()
+
 
 function App() {
 
-  const [authenticated, setAuthenticated] = useState(false);
   return (
     <div className="App">
 
-      <userContext.Provider value={[authenticated, setAuthenticated]}>
+      <AuthProvider>
         <Navigation />
 
         <Routes>
@@ -39,7 +39,7 @@ function App() {
           <Route path="/Myprofile" element={<Myprofile />} />
           <Route path="/Account" element={<Account />} />
         </Routes>
-      </userContext.Provider>
+      </AuthProvider>
 
 
     </div>

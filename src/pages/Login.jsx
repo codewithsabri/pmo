@@ -2,7 +2,7 @@ import { useState, useRef, useEffect, useContext } from 'react'
 import { Link } from "react-router-dom";
 import { userContext } from '../App'
 import { useNavigate } from "react-router-dom";
-
+import { useAuth} from '../context/AuthContext';
 
 
 import { createClient } from '@supabase/supabase-js'
@@ -48,7 +48,8 @@ export default function App() {
     const [login, setLogin] = useState('');
     const [password, setPassword] = useState('');
 
-    const [authenticated, setAuthenticated] = useContext(userContext);
+    const { user, Authenticate, Disconnect } = useAuth();
+
     const navigate = useNavigate();
 
     async function signUpNewUser() {
@@ -84,9 +85,9 @@ export default function App() {
             console.error('Erreur de connexion:', error.message);
         } else {
             setError(null);
-            setAuthenticated(true)
+            Authenticate(true)
             console.log('Connexion réussie:', data);
-            console.log(authenticated);
+            console.log(user);
             navigate("/");
             // Ajoutez ici la logique pour rediriger l'utilisateur ou effectuer d'autres actions après la connexion
         }

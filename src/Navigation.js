@@ -1,10 +1,10 @@
 import React,{useContext} from 'react'
 import styles from "./index.css"
 import { Link } from "react-router-dom";
-import { userContext } from './App'
+import { useAuth } from './context/AuthContext';
 
 function Navigation() {
-    const [authenticated, setAuthenticated] = useContext(userContext);
+    const { user, Authenticate, Disconnect } = useAuth();
     return (
         <div>
             <nav className="flex items-center justify-between flex-wrap bg-red-500 p-6">
@@ -38,13 +38,13 @@ function Navigation() {
                             Account
                         </Link>
                     </div>
-                    {authenticated == false ?
+                    {user == false ?
                         <div>
                             <Link to="/Login" className="inline-block text-white text-sm px-4 py-2 leading-none border rounded text-white border-white  hover:text-white  mt-4 lg:mt-0">Login</Link>
                             <Link to="/Register" className="inline-block text-white text-sm px-4 py-2 leading-none border rounded text-white border-white  hover:text-white  ml-4 lg:mt-0">Register</Link>
                         </div>
                         :
-                        <div> <Link onClick={() => setAuthenticated(false)} to="/" className="inline-block text-white text-sm px-4 py-2 leading-none border rounded text-white border-white  hover:text-white  ml-4 lg:mt-0">Disconnect</Link></div>
+                        <div> <Link onClick={() => Disconnect(false)} to="/" className="inline-block text-white text-sm px-4 py-2 leading-none border rounded text-white border-white  hover:text-white  ml-4 lg:mt-0">Disconnect</Link></div>
                     }
                 </div>
             </nav>
