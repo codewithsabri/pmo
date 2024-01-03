@@ -6,33 +6,71 @@ function Myprofile() {
     return (
         <div className="profile-container">
 
-            <div className="max-w-sm w-full lg:max-w-full lg:flex">
-                <div className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" title="Woman holding a mug">
-                </div>
-                <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-                    <div className="mb-8">
-                        <p className="text-sm text-gray-600 flex items-center">
-                            <svg className="fill-current text-gray-500 w-3 h-3 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                <path d="M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z" />
-                            </svg>
-                            Members only
-                        </p>
-                        <div className="text-gray-900 font-bold text-xl mb-2">Can coffee make you a better developer?</div>
-                        <p className="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
-                    </div>
-                    <div className="flex items-center">
-                        <img className="w-10 h-10 rounded-full mr-4" src="/img/jonathan.jpg" alt="Avatar of Jonathan Reinink" />
-                        <div className="text-sm">
-                            <p className="text-gray-900 leading-none">Jonathan Reinink</p>
-                            <p className="text-gray-600">Aug 18</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+            {/* Introdcution title */}
+
+
 
             <div className="profile-header">
                 <h1>My Addiction Profile</h1>
+                <span>Choose avatar</span>
+                <span>Choose username</span>
             </div>
+
+            <div><span>Tabacco</span>
+
+                <a href="#" class="m-auto block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Tabacco</h5>
+                    <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                    <p>Current goal 10 days</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                        <div class="bg-blue-600 h-2.5 rounded-full" style={{ width: "75%" }}></div>
+                    </div>
+
+                </a>
+
+
+            </div>
+            <div><span>Alcohol</span>
+
+                <a href="#" class="m-auto block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Alcohol</h5>
+                    <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                    <p>Current goal 25 days</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                        <div class="bg-pink-600 h-2.5 rounded-full" style={{ width: "75%" }}></div>
+                    </div>
+                </a>
+            </div>
+
+            <div><span>Social Media</span>
+
+                <a href="#" class="m-auto block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Social Media</h5>
+                    <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                    <p>Current goal 3 days</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                        <div class="bg-teal-600 h-2.5 rounded-full" style={{ width: "75%" }}></div>
+                    </div>
+                </a>
+            </div>
+            
+            <div><span>Sex</span>
+
+                <a href="#" class="m-auto block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Sex</h5>
+                    <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                    <p>Current goal 3 days</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                        <div class="bg-orange-600 h-2.5 rounded-full" style={{ width: "75%" }}></div>
+                    </div>
+                </a>
+            </div>
+
             <div className="progress-container">
                 <h2>Progress</h2>
                 <div className="progress-bar" style={{ width: `${(progress / goal) * 100}%`, backgroundColor: 'red' }}>
@@ -43,6 +81,13 @@ function Myprofile() {
                 <h2>Goal</h2>
                 <p>{`My goal is to reach ${goal + ' ' + 'days'} in my addiction recovery.`}</p>
             </div>
+
+
+            {/* Card elements  */}
+
+
+
+
         </div>
     )
 }

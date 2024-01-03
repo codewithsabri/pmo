@@ -13,6 +13,7 @@ import Ressources from './Component/Ressources';
 // import Stopwatch from './Component/Stopwatch';
 import SucessStories from './Component/SucessStories';
 import Myprofile from './Component/Myprofile';
+import Account from './Component/Account';
 import { createContext, useContext } from 'react';
 
 export const userContext = createContext()
@@ -36,6 +37,7 @@ function App() {
           <Route path="/Ressources" element={<Ressources />} />
           <Route path="/SucessStories" element={<SucessStories />} />
           <Route path="/Myprofile" element={<Myprofile />} />
+          <Route path="/Account" element={<Account />} />
         </Routes>
       </userContext.Provider>
 

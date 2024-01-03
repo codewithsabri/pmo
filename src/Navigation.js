@@ -31,8 +31,11 @@ function Navigation() {
                         <Link to="ChartProgress" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
                             Chart
                         </Link>
-                        <Link to="Myprofile" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+                        <Link to="Myprofile" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
                             My profil
+                        </Link>
+                        <Link to="Account" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+                            Account
                         </Link>
                     </div>
                     {authenticated == false ?
